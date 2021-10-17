@@ -5,4 +5,4 @@
 layout: home
 ---
 
-hello world
+WEBサイト引っ越しました
