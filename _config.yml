@@ -24,7 +24,7 @@ author: キッド
 email: mmmmmmmmm9@live.jp
 description: >- # this means to ignore newlines until "baseurl:"
   キッドの雑多な趣味ブログ。主な話題はギター、歌、ゲーム、アニメ、釣り、キャンプ、バイク、カメラ、登山など。
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/m9logs" # the subpath of your site, e.g. /blog
 url: "https://m9logs.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kidm9
 timezone: Asia/Tokyo
