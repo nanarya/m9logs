@@ -38,6 +38,7 @@ social:
     - https://twitter.com/kidm9
 kramdown:
   hard_wrap: true
+encoding: utf-8
 
 # Build settings
 theme: minima 
