@@ -4,7 +4,7 @@ title: 裾野キャンプしてきたよ
 date: 2019-04-14 21:29
 author: kidm9
 comments: true
-categories: [日記]
+categories: camp
 ---
 とにゃ〜、キッドです。
 

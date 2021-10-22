@@ -4,7 +4,7 @@ title: 天狗温泉浅間山荘でキャンプしました@長野
 date: 2019-07-22 00:44
 author: kidm9
 comments: true
-categories: [CB223S, キャンプ, おでかけ]
+categories: camp
 ---
 <!-- wp:paragraph -->
 <p>とにゃ～！</p>

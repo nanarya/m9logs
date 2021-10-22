@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Wordpressカスタマイズ:IsleMag | m9logs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Wordpressカスタマイズ:IsleMag" />
+<meta name="author" content="kidm9" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="備忘録。 テーマIsleMag   子テーマ作成 子テーマを作ろうとするも、自分で作成は上手くいかず。 Wordpress.orgのwikiとIsleMagでの子テーマ作成のページを参照。どちらもstyleが引き継げず。 Child Themesというプラグインを使って解決。（中身は似たようなものなんだけどな…）     日付表記の変更 日付表示が22 7月となっていたため、2017-7-22表記に変更。 content-template1.php content-template2.php content-template3.php content-template4.php slider-posts.php の5つのデータの( ‘j M’ )を(&#39;Y-m-d&#39;)に変更 参考ページ http://affiliate-de.com/%E3%80%8Cislemag%E3%80%8D%E3%81%AE%E6%8A%95%E7%A8%BF%E6%97%A5%E8%A1%A8%E7%A4%BA%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B   footerの余白調整 子テーマのstyle.cssを編集して #footer-inner { padding:0; } としたことで、フッターに余計な余白ができなくなるように調整。 フッター上部の、広告やウィジェットを入れられるエリアを削除。 参考：なし   footerの文字調整 footer.phpでフッターの文字を入れ替えた。 &lt;?php islemag_footer_container_head(); islemag_footer_content(); islemag_footer_container_bottom();?&gt; となっていたのを &lt;?php islemag_footer_container_head();?&gt; &lt;div style=&quot;margin-left:20px;&quot;&gt; Copyright &amp;copy;  &lt;?php bloginfo( &#39;name&#39; ); ?&gt;  2011 - &lt;?php echo date( &#39;Y&#39; ); ?&gt; All Rights Reserved. &lt;/div&gt; &lt;?php islemag_footer_container_bottom();?&gt; と修正。 divで位置調整 ブログ名と今年の年を引っ張ってきて Copyright © むきゅ～LOGS 2011 - 2017 All Rights Reserved. と表記される 参考ページ https://shiritai.net/islemag/#i-4   footerのリンク調整 さっきのやり方だとSNSリンクが消えてしまったので入れるために調整。 （結局全部直してるのでさっきのはあんまり役に立たなかった…） inc/extras.php内の関数islemag_footerが悪さをしている様子。 islemag_footer_contentが実行された際にislemag_footerが追加で実行される。 islemag_footerの中身は大きく分けて二つ。 テーマ名等が入る部分と、SNSメニューを入れる部分。 テーマ名の部分をコピーライトに変えれば大丈夫と判断。 inc/extras.phpをそのまま編集してもよかったけれど、functions.phpでislemag_footerを上書きする方法で対応。 inc/extras.phpからfunctions.phpにislemag_footerの記述を持ってきて if ( ! function_exists( &#39;islemag_footer&#39; ) ) { /*Display footer function. */ function islemag_footer() { ?&gt; &lt;div class=&quot;col-md-8 col-md-push-4 islemag-footer-menu&quot;&gt; &lt;?php $defaults = array( &#39;theme_location&#39; =&gt; &#39;islemag-footer&#39;, &#39;fallback_cb&#39;    =&gt; false, &#39;items_wrap&#39;     =&gt; &#39;&lt;ul class=&quot;footer-menu&quot; id=&quot;%1$s&quot;class=&quot;%2$s&quot;&gt;%3$s&lt;/ul&gt;&#39;, &#39;depth&#39;          =&gt; 1, ); wp_nav_menu( $defaults ); ?&gt; &lt;/div&gt;&lt;!-- End .col-md-6 --&gt; &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; &lt;?php printf( /* translators: 1 - Theme name , 2 - WordPress link */ __( &#39;%1$s powered by %2$s&#39;, &#39;islemag&#39; ), sprintf( &#39;&lt;a href=&quot;https://themeisle.com/themes/islemag/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;,esc_html__( &#39;Islemag&#39;, &#39;islemag&#39; ) ), sprintf( &#39;&lt;a href=&quot;http://wordpress.org/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;WordPress&#39;, &#39;islemag&#39; ) ) ); ?&gt; &lt;/div&gt;&lt;!-- End .col-md-6 --&gt; &lt;?php } } add_action( &#39;islemag_footer_content&#39;,&#39;islemag_footer&#39; ); を編集していく。 &lt;?php printf( /* translators: 1 - Theme name , 2 - WordPress link */ __( &#39;%1$s powered by %2$s&#39;, &#39;islemag&#39; ), sprintf( &#39;&lt;a href=&quot;https://themeisle.com/themes/islemag/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;Islemag&#39;, &#39;islemag&#39; ) ), sprintf( &#39;&lt;a href=&quot;http://wordpress.org/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;WordPress&#39;, &#39;islemag&#39; ) ) ); ?&gt; の部分を先ほどの &lt;div style=”margin-left:20px;”&gt; Copyright &amp;copy;  &lt;?php bloginfo( ‘name’ ); ?&gt;  2011 - &lt;?php echo date( ‘Y’ ); ?&gt; All Rights Reserved. &lt;/div&gt; に変更。 なぜか謎の改行がされる… おそらく変更部分をかこっているdivのclassが悪いことしてるな。 &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; この人たちを探そう。 色々探してみたところ、col-md-4やcol-pull-8などは、それぞれlrftやwidthなどに%で対応しているものらしい。 もとからいくつも用意されていて、状況に応じて数字を変えて作れるようになっているみたい。 8は66%、4は33%らしい。50%にしたかったので、ここを6に変更。 左右両方、50%の大きさで、それぞれ左右50%の位置に置くように設定。 &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; &lt;div class=&quot;col-md-8 col-md-push-4 islemag-footer-menu&quot;&gt; この二つのタグを &lt;div class=&quot;col-md-6 col-md-pull-6 powerdby&quot;&gt; &lt;div class=&quot;col-md-6 col-md-push-6 islemag-footer-menu&quot;&gt; こうするだけでよかった様子。 こうすることでwidth:50%;left:50%;とwidth:50%;right:50%に設定される様子。 なるほどね。   タイトルと見出しのデザインの修正 style.cssに以下を追記。 .post .entry-title{ border-left: solid 6px orange; border-bottom: solid 2px #DDDDDD; background: linear-gradient(transparent 0, #F7F7F7 0); padding:10px; } .entry-content h2{border-left: solid 6px orange; padding:10px;} とりあえずこんなもんかな" />
+<meta property="og:description" content="備忘録。 テーマIsleMag   子テーマ作成 子テーマを作ろうとするも、自分で作成は上手くいかず。 Wordpress.orgのwikiとIsleMagでの子テーマ作成のページを参照。どちらもstyleが引き継げず。 Child Themesというプラグインを使って解決。（中身は似たようなものなんだけどな…）     日付表記の変更 日付表示が22 7月となっていたため、2017-7-22表記に変更。 content-template1.php content-template2.php content-template3.php content-template4.php slider-posts.php の5つのデータの( ‘j M’ )を(&#39;Y-m-d&#39;)に変更 参考ページ http://affiliate-de.com/%E3%80%8Cislemag%E3%80%8D%E3%81%AE%E6%8A%95%E7%A8%BF%E6%97%A5%E8%A1%A8%E7%A4%BA%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B   footerの余白調整 子テーマのstyle.cssを編集して #footer-inner { padding:0; } としたことで、フッターに余計な余白ができなくなるように調整。 フッター上部の、広告やウィジェットを入れられるエリアを削除。 参考：なし   footerの文字調整 footer.phpでフッターの文字を入れ替えた。 &lt;?php islemag_footer_container_head(); islemag_footer_content(); islemag_footer_container_bottom();?&gt; となっていたのを &lt;?php islemag_footer_container_head();?&gt; &lt;div style=&quot;margin-left:20px;&quot;&gt; Copyright &amp;copy;  &lt;?php bloginfo( &#39;name&#39; ); ?&gt;  2011 - &lt;?php echo date( &#39;Y&#39; ); ?&gt; All Rights Reserved. &lt;/div&gt; &lt;?php islemag_footer_container_bottom();?&gt; と修正。 divで位置調整 ブログ名と今年の年を引っ張ってきて Copyright © むきゅ～LOGS 2011 - 2017 All Rights Reserved. と表記される 参考ページ https://shiritai.net/islemag/#i-4   footerのリンク調整 さっきのやり方だとSNSリンクが消えてしまったので入れるために調整。 （結局全部直してるのでさっきのはあんまり役に立たなかった…） inc/extras.php内の関数islemag_footerが悪さをしている様子。 islemag_footer_contentが実行された際にislemag_footerが追加で実行される。 islemag_footerの中身は大きく分けて二つ。 テーマ名等が入る部分と、SNSメニューを入れる部分。 テーマ名の部分をコピーライトに変えれば大丈夫と判断。 inc/extras.phpをそのまま編集してもよかったけれど、functions.phpでislemag_footerを上書きする方法で対応。 inc/extras.phpからfunctions.phpにislemag_footerの記述を持ってきて if ( ! function_exists( &#39;islemag_footer&#39; ) ) { /*Display footer function. */ function islemag_footer() { ?&gt; &lt;div class=&quot;col-md-8 col-md-push-4 islemag-footer-menu&quot;&gt; &lt;?php $defaults = array( &#39;theme_location&#39; =&gt; &#39;islemag-footer&#39;, &#39;fallback_cb&#39;    =&gt; false, &#39;items_wrap&#39;     =&gt; &#39;&lt;ul class=&quot;footer-menu&quot; id=&quot;%1$s&quot;class=&quot;%2$s&quot;&gt;%3$s&lt;/ul&gt;&#39;, &#39;depth&#39;          =&gt; 1, ); wp_nav_menu( $defaults ); ?&gt; &lt;/div&gt;&lt;!-- End .col-md-6 --&gt; &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; &lt;?php printf( /* translators: 1 - Theme name , 2 - WordPress link */ __( &#39;%1$s powered by %2$s&#39;, &#39;islemag&#39; ), sprintf( &#39;&lt;a href=&quot;https://themeisle.com/themes/islemag/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;,esc_html__( &#39;Islemag&#39;, &#39;islemag&#39; ) ), sprintf( &#39;&lt;a href=&quot;http://wordpress.org/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;WordPress&#39;, &#39;islemag&#39; ) ) ); ?&gt; &lt;/div&gt;&lt;!-- End .col-md-6 --&gt; &lt;?php } } add_action( &#39;islemag_footer_content&#39;,&#39;islemag_footer&#39; ); を編集していく。 &lt;?php printf( /* translators: 1 - Theme name , 2 - WordPress link */ __( &#39;%1$s powered by %2$s&#39;, &#39;islemag&#39; ), sprintf( &#39;&lt;a href=&quot;https://themeisle.com/themes/islemag/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;Islemag&#39;, &#39;islemag&#39; ) ), sprintf( &#39;&lt;a href=&quot;http://wordpress.org/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;WordPress&#39;, &#39;islemag&#39; ) ) ); ?&gt; の部分を先ほどの &lt;div style=”margin-left:20px;”&gt; Copyright &amp;copy;  &lt;?php bloginfo( ‘name’ ); ?&gt;  2011 - &lt;?php echo date( ‘Y’ ); ?&gt; All Rights Reserved. &lt;/div&gt; に変更。 なぜか謎の改行がされる… おそらく変更部分をかこっているdivのclassが悪いことしてるな。 &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; この人たちを探そう。 色々探してみたところ、col-md-4やcol-pull-8などは、それぞれlrftやwidthなどに%で対応しているものらしい。 もとからいくつも用意されていて、状況に応じて数字を変えて作れるようになっているみたい。 8は66%、4は33%らしい。50%にしたかったので、ここを6に変更。 左右両方、50%の大きさで、それぞれ左右50%の位置に置くように設定。 &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; &lt;div class=&quot;col-md-8 col-md-push-4 islemag-footer-menu&quot;&gt; この二つのタグを &lt;div class=&quot;col-md-6 col-md-pull-6 powerdby&quot;&gt; &lt;div class=&quot;col-md-6 col-md-push-6 islemag-footer-menu&quot;&gt; こうするだけでよかった様子。 こうすることでwidth:50%;left:50%;とwidth:50%;right:50%に設定される様子。 なるほどね。   タイトルと見出しのデザインの修正 style.cssに以下を追記。 .post .entry-title{ border-left: solid 6px orange; border-bottom: solid 2px #DDDDDD; background: linear-gradient(transparent 0, #F7F7F7 0); padding:10px; } .entry-content h2{border-left: solid 6px orange; padding:10px;} とりあえずこんなもんかな" />
+<link rel="canonical" href="http://0.0.0.0:4000/m9logs/development/2017/07/22/20170722001.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/m9logs/development/2017/07/22/20170722001.html" />
+<meta property="og:site_name" content="m9logs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-07-22T10:46:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wordpressカスタマイズ:IsleMag" />
+<meta name="twitter:site" content="@kidm9" />
+<meta name="twitter:creator" content="@kidm9" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4000/m9logs/development/2017/07/22/20170722001.html","@type":"BlogPosting","headline":"Wordpressカスタマイズ:IsleMag","dateModified":"2017-07-22T10:46:00+09:00","datePublished":"2017-07-22T10:46:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/m9logs/development/2017/07/22/20170722001.html"},"author":{"@type":"Person","name":"kidm9"},"description":"備忘録。 テーマIsleMag   子テーマ作成 子テーマを作ろうとするも、自分で作成は上手くいかず。 Wordpress.orgのwikiとIsleMagでの子テーマ作成のページを参照。どちらもstyleが引き継げず。 Child Themesというプラグインを使って解決。（中身は似たようなものなんだけどな…）     日付表記の変更 日付表示が22 7月となっていたため、2017-7-22表記に変更。 content-template1.php content-template2.php content-template3.php content-template4.php slider-posts.php の5つのデータの( ‘j M’ )を(&#39;Y-m-d&#39;)に変更 参考ページ http://affiliate-de.com/%E3%80%8Cislemag%E3%80%8D%E3%81%AE%E6%8A%95%E7%A8%BF%E6%97%A5%E8%A1%A8%E7%A4%BA%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B   footerの余白調整 子テーマのstyle.cssを編集して #footer-inner { padding:0; } としたことで、フッターに余計な余白ができなくなるように調整。 フッター上部の、広告やウィジェットを入れられるエリアを削除。 参考：なし   footerの文字調整 footer.phpでフッターの文字を入れ替えた。 &lt;?php islemag_footer_container_head(); islemag_footer_content(); islemag_footer_container_bottom();?&gt; となっていたのを &lt;?php islemag_footer_container_head();?&gt; &lt;div style=&quot;margin-left:20px;&quot;&gt; Copyright &amp;copy;  &lt;?php bloginfo( &#39;name&#39; ); ?&gt;  2011 - &lt;?php echo date( &#39;Y&#39; ); ?&gt; All Rights Reserved. &lt;/div&gt; &lt;?php islemag_footer_container_bottom();?&gt; と修正。 divで位置調整 ブログ名と今年の年を引っ張ってきて Copyright © むきゅ～LOGS 2011 - 2017 All Rights Reserved. と表記される 参考ページ https://shiritai.net/islemag/#i-4   footerのリンク調整 さっきのやり方だとSNSリンクが消えてしまったので入れるために調整。 （結局全部直してるのでさっきのはあんまり役に立たなかった…） inc/extras.php内の関数islemag_footerが悪さをしている様子。 islemag_footer_contentが実行された際にislemag_footerが追加で実行される。 islemag_footerの中身は大きく分けて二つ。 テーマ名等が入る部分と、SNSメニューを入れる部分。 テーマ名の部分をコピーライトに変えれば大丈夫と判断。 inc/extras.phpをそのまま編集してもよかったけれど、functions.phpでislemag_footerを上書きする方法で対応。 inc/extras.phpからfunctions.phpにislemag_footerの記述を持ってきて if ( ! function_exists( &#39;islemag_footer&#39; ) ) { /*Display footer function. */ function islemag_footer() { ?&gt; &lt;div class=&quot;col-md-8 col-md-push-4 islemag-footer-menu&quot;&gt; &lt;?php $defaults = array( &#39;theme_location&#39; =&gt; &#39;islemag-footer&#39;, &#39;fallback_cb&#39;    =&gt; false, &#39;items_wrap&#39;     =&gt; &#39;&lt;ul class=&quot;footer-menu&quot; id=&quot;%1$s&quot;class=&quot;%2$s&quot;&gt;%3$s&lt;/ul&gt;&#39;, &#39;depth&#39;          =&gt; 1, ); wp_nav_menu( $defaults ); ?&gt; &lt;/div&gt;&lt;!-- End .col-md-6 --&gt; &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; &lt;?php printf( /* translators: 1 - Theme name , 2 - WordPress link */ __( &#39;%1$s powered by %2$s&#39;, &#39;islemag&#39; ), sprintf( &#39;&lt;a href=&quot;https://themeisle.com/themes/islemag/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;,esc_html__( &#39;Islemag&#39;, &#39;islemag&#39; ) ), sprintf( &#39;&lt;a href=&quot;http://wordpress.org/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;WordPress&#39;, &#39;islemag&#39; ) ) ); ?&gt; &lt;/div&gt;&lt;!-- End .col-md-6 --&gt; &lt;?php } } add_action( &#39;islemag_footer_content&#39;,&#39;islemag_footer&#39; ); を編集していく。 &lt;?php printf( /* translators: 1 - Theme name , 2 - WordPress link */ __( &#39;%1$s powered by %2$s&#39;, &#39;islemag&#39; ), sprintf( &#39;&lt;a href=&quot;https://themeisle.com/themes/islemag/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;Islemag&#39;, &#39;islemag&#39; ) ), sprintf( &#39;&lt;a href=&quot;http://wordpress.org/&quot; rel=&quot;nofollow&quot;&gt;%s&lt;/a&gt;&#39;, esc_html__( &#39;WordPress&#39;, &#39;islemag&#39; ) ) ); ?&gt; の部分を先ほどの &lt;div style=”margin-left:20px;”&gt; Copyright &amp;copy;  &lt;?php bloginfo( ‘name’ ); ?&gt;  2011 - &lt;?php echo date( ‘Y’ ); ?&gt; All Rights Reserved. &lt;/div&gt; に変更。 なぜか謎の改行がされる… おそらく変更部分をかこっているdivのclassが悪いことしてるな。 &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; この人たちを探そう。 色々探してみたところ、col-md-4やcol-pull-8などは、それぞれlrftやwidthなどに%で対応しているものらしい。 もとからいくつも用意されていて、状況に応じて数字を変えて作れるようになっているみたい。 8は66%、4は33%らしい。50%にしたかったので、ここを6に変更。 左右両方、50%の大きさで、それぞれ左右50%の位置に置くように設定。 &lt;div class=&quot;col-md-4 col-md-pull-8 powerdby&quot;&gt; &lt;div class=&quot;col-md-8 col-md-push-4 islemag-footer-menu&quot;&gt; この二つのタグを &lt;div class=&quot;col-md-6 col-md-pull-6 powerdby&quot;&gt; &lt;div class=&quot;col-md-6 col-md-push-6 islemag-footer-menu&quot;&gt; こうするだけでよかった様子。 こうすることでwidth:50%;left:50%;とwidth:50%;right:50%に設定される様子。 なるほどね。   タイトルと見出しのデザインの修正 style.cssに以下を追記。 .post .entry-title{ border-left: solid 6px orange; border-bottom: solid 2px #DDDDDD; background: linear-gradient(transparent 0, #F7F7F7 0); padding:10px; } .entry-content h2{border-left: solid 6px orange; padding:10px;} とりあえずこんなもんかな","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/m9logs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/m9logs/feed.xml" title="m9logs" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/m9logs/">m9logs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/m9logs/kidhub/">KidHub</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Wordpressカスタマイズ:IsleMag</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-07-22T10:46:00+09:00" itemprop="datePublished">Jul 22, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">kidm9</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>備忘録。</p>
+
+<!--more-->
+
+<p>テーマIsleMag</p>
+
+<p> </p>
+<h2>子テーマ作成</h2>
+<p>子テーマを作ろうとするも、自分で作成は上手くいかず。</p>
+
+<p>Wordpress.orgのwikiとIsleMagでの子テーマ作成のページを参照。どちらもstyleが引き継げず。</p>
+
+<p>Child Themesというプラグインを使って解決。（中身は似たようなものなんだけどな…）</p>
+
+<p> </p>
+
+<p> </p>
+<h2>日付表記の変更</h2>
+<p>日付表示が22 7月となっていたため、2017-7-22表記に変更。</p>
+<blockquote>content-template1.php
+
+content-template2.php
+
+content-template3.php
+
+content-template4.php
+
+slider-posts.php
+
+の5つのデータの( ‘j M’ )を('Y-m-d')に変更</blockquote>
+<p>参考ページ</p>
+
+<p>http://affiliate-de.com/%E3%80%8Cislemag%E3%80%8D%E3%81%AE%E6%8A%95%E7%A8%BF%E6%97%A5%E8%A1%A8%E7%A4%BA%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B</p>
+
+<p> </p>
+<h2>footerの余白調整</h2>
+<p>子テーマのstyle.cssを編集して</p>
+<blockquote>#footer-inner { padding:0; }</blockquote>
+<p>としたことで、フッターに余計な余白ができなくなるように調整。</p>
+
+<p>フッター上部の、広告やウィジェットを入れられるエリアを削除。</p>
+
+<p>参考：なし</p>
+
+<p> </p>
+<h2>footerの文字調整</h2>
+<p>footer.phpでフッターの文字を入れ替えた。</p>
+<blockquote>
+<p class="hljs xml"><span class="php"><span class="hljs-meta">&lt;?php</span> </span></p>
+<p class="hljs xml"><span class="php"> islemag_footer_container_head(); </span></p>
+<p class="hljs xml"><span class="php"> islemag_footer_content(); </span></p>
+<span class="php"> islemag_footer_container_bottom();<span class="hljs-meta">?&gt;</span></span></blockquote>
+<p><span class="php"><span class="hljs-meta">となっていたのを</span></span></p>
+<blockquote>&lt;?php islemag_footer_container_head();?&gt;
+
+&lt;div style="margin-left:20px;"&gt; Copyright &amp;copy;  &lt;?php bloginfo( 'name' ); ?&gt;  2011 - &lt;?php echo date( 'Y' ); ?&gt; All Rights Reserved. &lt;/div&gt;
+
+&lt;?php islemag_footer_container_bottom();?&gt;</blockquote>
+<p>と修正。</p>
+<blockquote>divで位置調整
+
+ブログ名と今年の年を引っ張ってきて
+
+Copyright © むきゅ～LOGS 2011 - 2017 All Rights Reserved.
+
+と表記される</blockquote>
+<p>参考ページ</p>
+
+<p>https://shiritai.net/islemag/#i-4</p>
+
+<p> </p>
+<h2>footerのリンク調整</h2>
+<p>さっきのやり方だとSNSリンクが消えてしまったので入れるために調整。</p>
+
+<p>（結局全部直してるのでさっきのはあんまり役に立たなかった…）</p>
+
+<p>inc/extras.php内の関数islemag_footerが悪さをしている様子。</p>
+
+<p>islemag_footer_contentが実行された際にislemag_footerが追加で実行される。</p>
+
+<p>islemag_footerの中身は大きく分けて二つ。</p>
+
+<p>テーマ名等が入る部分と、SNSメニューを入れる部分。</p>
+
+<p>テーマ名の部分をコピーライトに変えれば大丈夫と判断。</p>
+
+<p>inc/extras.phpをそのまま編集してもよかったけれど、functions.phpでislemag_footerを上書きする方法で対応。</p>
+
+<p>inc/extras.phpからfunctions.phpにislemag_footerの記述を持ってきて</p>
+<blockquote>if ( ! function_exists( 'islemag_footer' ) ) {
+
+/*Display footer function. */
+
+function islemag_footer() {
+
+?&gt;
+
+&lt;div class="col-md-8 col-md-push-4 islemag-footer-menu"&gt;
+
+&lt;?php
+
+$defaults = array(
+
+'theme_location' =&gt; 'islemag-footer',
+
+'fallback_cb'    =&gt; false,
+
+'items_wrap'     =&gt; '&lt;ul class="footer-menu" id="%1$s"class="%2$s"&gt;%3$s&lt;/ul&gt;',
+
+'depth'          =&gt; 1,
+
+);
+
+wp_nav_menu( $defaults );
+
+?&gt;
+
+&lt;/div&gt;&lt;!-- End .col-md-6 --&gt;
+
+&lt;div class="col-md-4 col-md-pull-8 powerdby"&gt;
+
+&lt;?php printf(
+
+/* translators: 1 - Theme name , 2 - WordPress link */
+
+__( '%1$s powered by %2$s', 'islemag' ),
+
+sprintf( '&lt;a href="https://themeisle.com/themes/islemag/" rel="nofollow"&gt;%s&lt;/a&gt;',esc_html__( 'Islemag', 'islemag' ) ),
+
+sprintf( '&lt;a href="http://wordpress.org/" rel="nofollow"&gt;%s&lt;/a&gt;', esc_html__( 'WordPress', 'islemag' ) )
+
+); ?&gt;
+
+&lt;/div&gt;&lt;!-- End .col-md-6 --&gt;
+
+&lt;?php
+
+}
+
+}
+
+add_action( 'islemag_footer_content','islemag_footer' );</blockquote>
+<p>を編集していく。</p>
+<blockquote>&lt;?php printf(
+
+/* translators: 1 - Theme name , 2 - WordPress link */
+
+__( '%1$s powered by %2$s', 'islemag' ),
+
+sprintf( '&lt;a href="https://themeisle.com/themes/islemag/" rel="nofollow"&gt;%s&lt;/a&gt;', esc_html__( 'Islemag', 'islemag' ) ),
+
+sprintf( '&lt;a href="http://wordpress.org/" rel="nofollow"&gt;%s&lt;/a&gt;', esc_html__( 'WordPress', 'islemag' ) ) );
+
+?&gt;</blockquote>
+<p>の部分を先ほどの</p>
+
+<p>&lt;div style=”margin-left:20px;”&gt; Copyright &amp;copy;  &lt;?php bloginfo( ‘name’ ); ?&gt;  2011 - &lt;?php echo date( ‘Y’ ); ?&gt; All Rights Reserved. &lt;/div&gt;</p>
+
+<p>に変更。</p>
+
+<p><img class="aligncenter size-large wp-image-274" src="/m9logs/assets/2017/07/170722footer-1024x555.jpg" alt="" width="640" height="347" /></p>
+
+<p>なぜか謎の改行がされる…</p>
+
+<p>おそらく変更部分をかこっているdivのclassが悪いことしてるな。</p>
+<blockquote>&lt;div class="col-md-4 col-md-pull-8 powerdby"&gt;</blockquote>
+<p>この人たちを探そう。</p>
+
+<p>色々探してみたところ、col-md-4やcol-pull-8などは、それぞれlrftやwidthなどに%で対応しているものらしい。</p>
+
+<p>もとからいくつも用意されていて、状況に応じて数字を変えて作れるようになっているみたい。</p>
+
+<p>8は66%、4は33%らしい。50%にしたかったので、ここを6に変更。</p>
+
+<p>左右両方、50%の大きさで、それぞれ左右50%の位置に置くように設定。</p>
+<blockquote>&lt;div class="col-md-4 col-md-pull-8 powerdby"&gt;
+
+&lt;div class="col-md-8 col-md-push-4 islemag-footer-menu"&gt;</blockquote>
+<p>この二つのタグを</p>
+<blockquote>&lt;div class="col-md-6 col-md-pull-6 powerdby"&gt;
+
+&lt;div class="col-md-6 col-md-push-6 islemag-footer-menu"&gt;</blockquote>
+<p>こうするだけでよかった様子。</p>
+
+<p>こうすることでwidth:50%;left:50%;とwidth:50%;right:50%に設定される様子。</p>
+
+<p>なるほどね。</p>
+
+<p> </p>
+<h2>タイトルと見出しのデザインの修正</h2>
+<p>style.cssに以下を追記。</p>
+<blockquote>.post .entry-title{
+
+border-left: solid 6px orange;
+
+border-bottom: solid 2px #DDDDDD;
+
+background: linear-gradient(transparent 0, #F7F7F7 0);
+
+padding:10px;
+
+}
+
+.entry-content h2{border-left: solid 6px orange; padding:10px;}</blockquote>
+<p>とりあえずこんなもんかな</p>
+
+  </div><a class="u-url" href="/m9logs/development/2017/07/22/20170722001.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/m9logs/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">m9logs</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">kidm9</li><li><a class="u-email" href="mailto:mmmmmmmmm9@live.jp">mmmmmmmmm9@live.jp</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.twitter.com/kidm9"><svg class="svg-icon"><use xlink:href="/m9logs/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">kidm9</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>キッドの雑多な趣味ブログ。主な話題はギター、歌、ゲーム、アニメ、釣り、キャンプ、バイク、カメラ、登山など。</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

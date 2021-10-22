@@ -4,7 +4,7 @@ title: 白川郷に行ってきたよ。
 date: 2017-09-24 14:43
 author: kidm9
 comments: true
-categories: [アニメ, 聖地巡礼, おでかけ]
+categories: trip
 ---
 とにゃ～！キッドです！
 

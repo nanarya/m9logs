@@ -4,7 +4,7 @@ title: 白岩渓流園でキャンプしました
 date: 2019-04-22 22:57
 author: kidm9
 comments: true
-categories: [おでかけ]
+categories: camp
 ---
 とにゃ〜、キッドです！
 

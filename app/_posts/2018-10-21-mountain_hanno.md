@@ -4,7 +4,7 @@ title: パーティ登山ノススメ ～飯能棒ノ嶺
 date: 2018-10-21 15:23
 author: kidm9
 comments: true
-categories: [おでかけ]
+categories: mountain
 ---
 とにゃ～！キッドです！
 

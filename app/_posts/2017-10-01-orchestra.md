@@ -4,7 +4,7 @@ title: オーケストラコンサートに行ってきました。
 date: 2017-10-01 08:48
 author: kidm9
 comments: true
-categories: [オーケストラ, FINAL FANTASY, 音楽, ゲーム]
+categories: music
 ---
 とにゃ～！キッドです。
 

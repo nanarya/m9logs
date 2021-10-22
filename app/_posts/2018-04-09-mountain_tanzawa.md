@@ -4,7 +4,7 @@ title: VS  丹沢山　ヤビツ峠からの縦走行脚
 date: 2018-04-09 23:03
 author: kidm9
 comments: true
-categories: [おでかけ]
+categories: mountain
 ---
 とにゃ～！キッドです。
 

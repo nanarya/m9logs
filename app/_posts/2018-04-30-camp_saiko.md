@@ -4,7 +4,7 @@ title: 少し早めのGW。2泊3日の湖畔キャンプ
 date: 2018-04-30 22:49
 author: kidm9
 comments: true
-categories: [おでかけ]
+categories: camp
 ---
 とにゃ～！キッドです。
 
