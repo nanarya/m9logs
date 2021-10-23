@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "WEBサイトを移設しました"
-date:   2021-10-17 11:00:00 +0900
+title: "WEBサイトを移設しました"
+date: 2021-10-17 11:00:00 +0900
+author: kidm9
+comments: true
 categories: diary
 ---
 WEBサイトを移設しました。
