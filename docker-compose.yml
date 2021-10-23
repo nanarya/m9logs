@@ -2,13 +2,13 @@ version: '3.7'
 services:
   app:
     image: jekyll/jekyll
-    # command: jekyll serve --force_polling --livereload --trace
-    command: jekyll build
+    command: jekyll serve --force_polling --livereload --trace
+    # command: jekyll build
     volumes:
       - $PWD:/srv/jekyll
     ports:
       - 4000:4000
       - 35729:35729
     environment:
-      - JEKYLL_ENV:production
+      - JEKYLL_ENV:development
       - LANG:ja_JP.UTF-8
