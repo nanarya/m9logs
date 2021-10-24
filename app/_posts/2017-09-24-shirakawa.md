@@ -2,7 +2,7 @@
 layout: post
 title: 白川郷に行ってきたよ。
 date: 2017-09-24 14:43
-author: kidm9
+author: キッド
 comments: true
 categories: trip
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Doki Doki Literature Club
 date: 2018-05-17 21:53
-author: kidm9
+author: キッド
 comments: true
 categories: game
 ---

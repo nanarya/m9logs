@@ -2,7 +2,7 @@
 layout: post
 title: PENN LEVELMATIC 910を買った
 date: 2021-06-11 00:56
-author: kidm9
+author: キッド
 comments: true
 categories: fishing
 ---

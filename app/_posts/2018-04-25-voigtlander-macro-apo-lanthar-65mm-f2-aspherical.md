@@ -2,7 +2,7 @@
 layout: post
 title: Voigtlander MACRO APO-LANTHAR 65mm F2 Aspherical
 date: 2018-04-25 22:39
-author: kidm9
+author: キッド
 comments: true
 categories: photo
 ---

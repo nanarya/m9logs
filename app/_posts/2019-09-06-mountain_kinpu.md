@@ -2,7 +2,7 @@
 layout: post
 title: 森林限界を見に行った話
 date: 2019-09-06 22:07
-author: kidm9
+author: キッド
 comments: true
 categories: mountain
 ---

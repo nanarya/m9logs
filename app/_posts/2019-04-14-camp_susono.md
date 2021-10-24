@@ -2,7 +2,7 @@
 layout: post
 title: 裾野キャンプしてきたよ
 date: 2019-04-14 21:29
-author: kidm9
+author: キッド
 comments: true
 categories: camp
 ---

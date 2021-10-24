@@ -2,7 +2,7 @@
 layout: post
 title: 朝日が昇る、私は旅する。ゆるキャン△ at 朝霧高原
 date: 2018-03-28 08:33
-author: kidm9
+author: キッド
 comments: true
 categories: camp
 ---

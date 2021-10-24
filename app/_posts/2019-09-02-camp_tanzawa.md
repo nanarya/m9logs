@@ -2,7 +2,7 @@
 layout: post
 title: 丹沢湖でキャンプをしたんですが...
 date: 2019-09-02 12:50
-author: kidm9
+author: キッド
 comments: true
 categories: camp
 ---

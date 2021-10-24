@@ -2,7 +2,7 @@
 layout: post
 title: むきゅ〜オブザイヤー2019
 date: 2020-01-03 08:56
-author: kidm9
+author: キッド
 comments: true
 categories: diary
 ---

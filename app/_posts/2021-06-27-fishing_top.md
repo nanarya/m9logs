@@ -2,7 +2,7 @@
 layout: post
 title: トップウォーターバスフィッシングという遊び
 date: 2021-06-27 07:22
-author: kidm9
+author: キッド
 comments: true
 categories: fishing
 ---

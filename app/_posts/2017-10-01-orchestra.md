@@ -2,7 +2,7 @@
 layout: post
 title: オーケストラコンサートに行ってきました。
 date: 2017-10-01 08:48
-author: kidm9
+author: キッド
 comments: true
 categories: music
 ---
