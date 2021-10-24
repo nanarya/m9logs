@@ -79,7 +79,7 @@ FF14はFFの中で2作目になるオンラインゲームで、キッドも3年
 <h2>9/24-星の調べ×テンプルナイツ交響楽団（FFT）</h2>
 &nbsp;
 
-<img class="aligncenter size-large wp-image-453" src="/m9logs/assets/2017/09/171001oche2-e1506298586145-768x1024.jpg" alt="" width="640" height="853" />
+<img class="aligncenter size-large wp-image-453" src="/assets/2017/09/171001oche2-e1506298586145-768x1024.jpg" alt="" width="640" height="853" />
 
 <a href="http://hoshi-templar.tumblr.com/">http://hoshi-templar.tumblr.com/</a>
 

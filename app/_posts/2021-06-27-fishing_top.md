@@ -35,7 +35,7 @@ categories: fishing]
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":986} -->
-<figure class="wp-block-image"><img src="/m9logs/assets/2021/06/IMG_1498-1024x768.jpg" alt="" class="wp-image-986"/></figure>
+<figure class="wp-block-image"><img src="/assets/2021/06/IMG_1498-1024x768.jpg" alt="" class="wp-image-986"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading -->
@@ -71,7 +71,7 @@ categories: fishing]
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":994} -->
-<figure class="wp-block-image"><img src="/m9logs/assets/2021/06/IMG_1508-1024x768.jpg" alt="" class="wp-image-994"/></figure>
+<figure class="wp-block-image"><img src="/assets/2021/06/IMG_1508-1024x768.jpg" alt="" class="wp-image-994"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading -->

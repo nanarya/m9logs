@@ -32,7 +32,7 @@ http://m9logs.net/goingout/547
 
 富士山方面（およびその向こう）に向かうに当たって、
 
-<img class="size-large wp-image-581 alignnone" src="/m9logs/assets/2018/04/0d40a5e4a645fc6b96e767d64ac0878e-1024x546.png" alt="" width="640" height="341" />
+<img class="size-large wp-image-581 alignnone" src="/assets/2018/04/0d40a5e4a645fc6b96e767d64ac0878e-1024x546.png" alt="" width="640" height="341" />
 
 こいつ...邪魔だな。
 
@@ -86,28 +86,28 @@ https://twitter.com/kidm9/status/982776168033042432
 
 二ノ塔まで登ると、三浦から湯河原まで見渡せて、山に登った感が出てきました。
 
-<img class="size-full wp-image-583 alignnone" src="/m9logs/assets/2018/04/DSC00768.jpg" alt="" width="1000" height="667" />
+<img class="size-full wp-image-583 alignnone" src="/assets/2018/04/DSC00768.jpg" alt="" width="1000" height="667" />
 
 奥にうっすら見えるのが三浦半島です。江ノ島も見えますね。神奈川の南側が端から端まで見渡せます。
 
 ここまで来てもまだまだ序の口。どんどん先へ進んでいきます。
 
-<img class="size-large wp-image-584 alignnone" src="/m9logs/assets/2018/04/DSC00801.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-584 alignnone" src="/assets/2018/04/DSC00801.jpg" alt="" width="640" height="427" />
 
 鎖を伝って崖を降り
-<img class="size-large wp-image-585 alignnone" src="/m9logs/assets/2018/04/DSC00805.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-585 alignnone" src="/assets/2018/04/DSC00805.jpg" alt="" width="640" height="427" />
 
 断崖絶壁を進みます。
 
-<img class="size-large wp-image-586 alignnone" src="/m9logs/assets/2018/04/DSC00807.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-586 alignnone" src="/assets/2018/04/DSC00807.jpg" alt="" width="640" height="427" />
 
 三の塔を越えてさらに進み...
 
-<img class="size-large wp-image-587 alignnone" src="/m9logs/assets/2018/04/DSC00811.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-587 alignnone" src="/assets/2018/04/DSC00811.jpg" alt="" width="640" height="427" />
 
 塔ノ岳へ到着！！
 
-<img class="size-large wp-image-588 alignnone" src="/m9logs/assets/2018/04/DSC00821.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-588 alignnone" src="/assets/2018/04/DSC00821.jpg" alt="" width="640" height="427" />
 
 一ノ塔（そんなのいたっけ？）二ノ塔、三ノ塔、塔ノ岳と、これで四天王制覇です。（
 <h2>四天王の先に待つ者</h2>
@@ -115,7 +115,7 @@ https://twitter.com/kidm9/status/982776168033042432
 
 みなさんお分かりですね。そう、ゴルベーザを倒すことです。
 
-<img class="size-large wp-image-589 alignnone" src="/m9logs/assets/2018/04/DSC00828.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-589 alignnone" src="/assets/2018/04/DSC00828.jpg" alt="" width="640" height="427" />
 
 ここまででかなり消耗してましたが、今日はこのボスを倒しにきたので気合を入れなおしてゴルベーザこと丹沢山へ向かいます。
 
@@ -127,15 +127,15 @@ https://www.flickr.com/photos/134331763@N08/41298871292/in/dateposted-public/
 
 塔ノ岳の先は一段と冷え込んでいて、霜や氷柱も見られました。
 
-<img class="size-large wp-image-590 alignnone" src="/m9logs/assets/2018/04/DSC00838.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-590 alignnone" src="/assets/2018/04/DSC00838.jpg" alt="" width="640" height="427" />
 
 そんなこんなでゴルベーザに到着。
 
-<img class="size-large wp-image-592 alignnone" src="/m9logs/assets/2018/04/DSC00898.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-592 alignnone" src="/assets/2018/04/DSC00898.jpg" alt="" width="640" height="427" />
 
 ここまで来るのに割と満身創痍です。
 
-<img class="size-large wp-image-591 alignnone" src="/m9logs/assets/2018/04/DSC00885.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-591 alignnone" src="/assets/2018/04/DSC00885.jpg" alt="" width="640" height="427" />
 
 ようやく一息ついてお昼。ちょっとおしゃれにコーヒーを沸かします。
 
@@ -163,7 +163,7 @@ https://www.flickr.com/photos/134331763@N08/41298871292/in/dateposted-public/
 
 がんばって歩いたので日没30分前（17:30）くらいにバス停につきました。
 
-<img class="size-large wp-image-593 alignnone" src="/m9logs/assets/2018/04/DSC00975.jpg" alt="" width="640" height="427" />
+<img class="size-large wp-image-593 alignnone" src="/assets/2018/04/DSC00975.jpg" alt="" width="640" height="427" />
 
 バス停には靴の洗い場が。きれいにしてからバスに乗ります。
 
