@@ -1,7 +1,7 @@
 ---
 layout: post
 title: elgato STREAM DECK
-date: 2022-08-11 12:00:00 +0900
+date: 2022-09-13 10:00:00 +0900
 author: キッド
 comments: true
 categories: gadget
