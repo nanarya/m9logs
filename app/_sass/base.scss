@@ -17,3 +17,10 @@ $accent-color: #666;
     padding-left: 10px;
   }
 }
+
+.post-list {
+  & > li {
+    border-left: 5px solid $accent-color;
+    padding-left: 20px;
+  }
+}
