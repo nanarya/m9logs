@@ -1,20 +1,19 @@
 $accent-color: #666;
-.post-content {
+.post {
+  h1, h2, h3, h4, h5, h6 {
+    &::first-letter {
+      color: $accent-color;
+    }
+  }
   h2 {
     margin-top: 60px;
     border-bottom: 1px solid $accent-color;
     margin-bottom: 20px;
-    &::first-letter {
-      color: $accent-color;
-    }
   }
   
   h3 {
     margin-top: 40px;
     border-left: 3px solid $accent-color;
     padding-left: 10px;
-    &::first-letter {
-      color: $accent-color;
-    }
   }
 }
