@@ -4,7 +4,8 @@ title: 裾野キャンプしてきたよ
 date: 2019-04-14 21:29
 author: キッド
 comments: true
-categories: camp
+categories:
+- camp
 ---
 とにゃ〜、キッドです。
 

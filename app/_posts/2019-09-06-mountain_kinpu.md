@@ -4,7 +4,8 @@ title: 森林限界を見に行った話
 date: 2019-09-06 22:07
 author: キッド
 comments: true
-categories: mountain
+categories:
+- mountain
 ---
 <!-- wp:paragraph -->
 <p>とにゃ〜！キッドです！<br>キャンプの話ばっかりアップしているこのブログですが、今回は登山の話！（結局またアウトドア）</p>

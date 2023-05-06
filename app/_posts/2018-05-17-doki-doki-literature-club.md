@@ -4,7 +4,8 @@ title: Doki Doki Literature Club
 date: 2018-05-17 21:53
 author: キッド
 comments: true
-categories: game
+categories:
+- game
 ---
 とにゃ～！キッドです！
 

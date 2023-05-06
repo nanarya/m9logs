@@ -4,7 +4,8 @@ title: ヘブバンの感想とスマホゲーに思うこと
 date: 2022-03-16 00:00:00 +0900
 author: キッド
 comments: true
-categories: game
+categories:
+- game
 ---
 とにゃ〜！
 あけましておめでとうござます、でしょうか。もう3月ですが。

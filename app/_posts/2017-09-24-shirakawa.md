@@ -4,7 +4,8 @@ title: 白川郷に行ってきたよ。
 date: 2017-09-24 14:43
 author: キッド
 comments: true
-categories: trip
+categories:
+- travel
 ---
 とにゃ～！キッドです！
 

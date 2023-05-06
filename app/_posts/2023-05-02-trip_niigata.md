@@ -5,7 +5,7 @@ date: 2023-05-02 08:00
 author: キッド
 comments: true
 categories:
-- trip
+- travel
 ---
 
 3年前から始めた御朱印集め。

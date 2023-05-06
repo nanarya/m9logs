@@ -4,7 +4,8 @@ title: PENN LEVELMATIC 910を買った
 date: 2021-06-11 00:56
 author: キッド
 comments: true
-categories: fishing
+categories:
+- fishing
 ---
 <!-- wp:paragraph -->
 <p>とにゃ〜、いつの間にかお久しぶりです、キッドです。<br>今日は釣りの話。新しいリールを買った報告です。</p>

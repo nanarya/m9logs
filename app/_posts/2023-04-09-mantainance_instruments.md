@@ -4,7 +4,8 @@ title: ギターとかアンプをメンテナンスに出した話
 date: 2023-04-09 10:00:00 +0900
 author: キッド
 comments: true
-categories: music
+categories:
+- music
 ---
 
 とにゃ〜！

@@ -4,7 +4,8 @@ title: "WEBサイトを移設しました"
 date: 2021-10-17 11:00:00 +0900
 author: キッド
 comments: true
-categories: diary
+categories:
+- diary
 ---
 WEBサイトを移設しました。
 

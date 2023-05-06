@@ -4,7 +4,8 @@ title: トップウォーターバスフィッシングという遊び
 date: 2021-06-27 07:22
 author: キッド
 comments: true
-categories: fishing
+categories:
+- fishing
 ---
 <!-- wp:paragraph -->
 <p>とにゃ～、最近はタックルベリーを巡ってルアーを漁るのが趣味のキッドです。<br>今日はマイブームの釣りについて、いつもはこんな遊びをしているよ、みたいな話をしたいと思います。</p>

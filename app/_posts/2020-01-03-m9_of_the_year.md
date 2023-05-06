@@ -4,7 +4,8 @@ title: むきゅ〜オブザイヤー2019
 date: 2020-01-03 08:56
 author: キッド
 comments: true
-categories: diary
+categories:
+- diary
 ---
 <!-- wp:paragraph -->
 <p>とにゃー！新年あけましておめでとうございます。今年もゆるゆるやっていきますので、どうぞよろしくお願いします。</p>

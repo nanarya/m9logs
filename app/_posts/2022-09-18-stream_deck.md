@@ -4,7 +4,8 @@ title: elgato STREAM DECK
 date: 2022-09-18 10:00:00 +0900
 author: キッド
 comments: true
-categories: gadget
+categories:
+- gadget
 ---
 
 とにゃ〜！

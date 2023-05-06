@@ -4,7 +4,8 @@ title: ここ最近の釣りの話
 date: 2022-09-19 12:00:00 +0900
 author: キッド
 comments: true
-categories: fishing
+categories:
+- fishing
 ---
 
 とにゃ〜！気を抜くとすぐに更新をサボる。よくないですね。

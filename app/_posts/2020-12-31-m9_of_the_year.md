@@ -4,7 +4,8 @@ title: むきゅ〜オブザイヤー2020
 date: 2020-12-31 22:15
 author: キッド
 comments: true
-categories: diary
+categories:
+- diary
 ---
 <!-- wp:paragraph -->
 <p>とにゃ〜！なんだかんだで今年も残すところあと少しですね。<br>今年は特にいろいろあって忙しい年だったような気もします。<br>ということで、2020年を振り返ってみたいと思います。</p>

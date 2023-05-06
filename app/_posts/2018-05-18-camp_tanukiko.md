@@ -4,7 +4,8 @@ title: 芝は良いぞ。田貫湖キャンプ
 date: 2018-05-18 23:16
 author: キッド
 comments: true
-categories: camp
+categories:
+- camp
 ---
 とにゃ～！キッドです。
 

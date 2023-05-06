@@ -4,7 +4,8 @@ title: NieR:Automata
 date: 2017-11-06 10:48
 author: キッド
 comments: true
-categories: game
+categories:
+- game
 ---
 とにゃ～！キッドです。
 

@@ -4,7 +4,8 @@ title: Internet Explorerとその子孫
 date: 2017-10-23 11:07
 author: キッド
 comments: true
-categories: development
+categories:
+- development
 ---
 とにゃ～、キッドです。
 

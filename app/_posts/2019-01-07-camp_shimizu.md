@@ -4,7 +4,8 @@ title: 2019キャンプ初め。清水公園キャンプ場
 date: 2019-01-07 16:56
 author: キッド
 comments: true
-categories: camp
+categories:
+- camp
 ---
 とにゃ〜！キッドです。
 

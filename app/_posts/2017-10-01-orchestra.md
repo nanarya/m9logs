@@ -4,7 +4,8 @@ title: オーケストラコンサートに行ってきました。
 date: 2017-10-01 08:48
 author: キッド
 comments: true
-categories: music
+categories:
+- music
 ---
 とにゃ～！キッドです。
 
