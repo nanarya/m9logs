@@ -26,9 +26,22 @@ $accent-color: #666;
 }
 
 .post-content {
-  img {
+  img, iframe {
     max-height: 400px;
     display: block;
     margin: 20px auto;
   }
+  .panel-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    // text-align:justify;
+    img {
+      margin: 10px auto;
+      max-height: none;
+      max-width: calc(50% - 10px);
+    }
+  }
 }
+

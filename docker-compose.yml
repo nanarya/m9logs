@@ -1,11 +1,10 @@
-version: '3.7'
 services:
   app:
     image: jekyll/jekyll
     command: jekyll serve --force_polling --livereload --trace
     # command: jekyll build
     volumes:
-      - $PWD:/srv/jekyll
+      - .:/srv/jekyll
     ports:
       - 4000:4000
       - 35729:35729
