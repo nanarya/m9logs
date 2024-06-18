@@ -18,11 +18,11 @@ __用語解説__
 
 普段聞き慣れない用語があると思うので最初に簡単に解説しておきますね。
 
-ブランク・・・竿の棒部分
-ガイド・・・糸を通す輪っか。これをブランクにくくりつけてロッドにする
-スレッド・・・ガイドを固定するための糸
-グリップ・・・持ち手部分。今回制作のロッドはグリップ分離式のチャンピオングリップと呼ばれるタイプ
-フェルール・・・グリップ分離式ロッドのブランクに取り付ける、グリップとの結合部分。滑り止めのついた金属パーツ。
+- ブランク：竿の棒部分
+- ガイド：糸を通す輪っか。これをブランクにくくりつけてロッドにする
+- スレッド：ガイドを固定するための糸
+- グリップ：持ち手部分。今回制作のロッドはグリップ分離式のチャンピオングリップと呼ばれるタイプ
+- フェルール：グリップ分離式ロッドのブランクに取り付ける、グリップとの結合部分。滑り止めのついた金属パーツ。
 
 ## "ロッドビルディング"なんて難しく考えなくても
 
@@ -128,6 +128,14 @@ __用語解説__
 </div>
 
 いろんなルアーで釣れて楽しい。
+
+### 釣りのお供の音楽たち
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0ZjFSIHLglwavZUgcCboJW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/37asoWjHlM134Da94j5kAc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+最近は宇多田ヒカルと椎名林檎ばっかり聞いてます
 
 ## ロッドビルディングが気になった人へ
 
