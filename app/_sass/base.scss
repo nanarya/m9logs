@@ -27,6 +27,7 @@ $accent-color: #666;
 
 .post-content {
   img, iframe {
+    max-width: 100%;
     max-height: 400px;
     display: block;
     margin: 20px auto;
@@ -36,7 +37,6 @@ $accent-color: #666;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    // text-align:justify;
     img {
       margin: 10px auto;
       max-height: none;
