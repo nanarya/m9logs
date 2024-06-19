@@ -29,6 +29,13 @@ url: "https://m9logs.net" # the base hostname & protocol for your site, e.g. htt
 twitter_username: kidm9
 timezone: Asia/Tokyo
 
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /posts/:year-:month-:day-:title.html
+
 twitter:
   username: kidm9
   card: summary

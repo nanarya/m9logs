@@ -5,9 +5,12 @@ services:
     # command: jekyll build
     volumes:
       - .:/srv/jekyll
+      - bundle:/usr/local/bundle
     ports:
       - 4000:4000
       - 35729:35729
     environment:
       - JEKYLL_ENV:development
       - LANG:ja_JP.UTF-8
+volumes:
+  bundle:
