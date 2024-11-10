@@ -24,6 +24,9 @@ categories:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5S7HmfIMBns?si=jxl-RlmR35De4P10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+動画の最初に出てくるバルバリの鳥瞰図が見られたのも感動でした。
+ヴェネツィアについて調べるとよく出てくる、1500年ごろのちょうどアサクリ2くらいの時期のヴェネツィア全景の画です。
+
 ## ヴェドゥータの魅力
 
 カナレットの作品を語るにあたって外せないキーワードがヴェドゥータ。
