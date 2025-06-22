@@ -5,7 +5,7 @@ date: 2020-01-03 08:56
 author: キッド
 comments: true
 categories:
-- diary
+- m9oftheyear
 ---
 <!-- wp:paragraph -->
 <p>とにゃー！新年あけましておめでとうございます。今年もゆるゆるやっていきますので、どうぞよろしくお願いします。</p>

@@ -21,6 +21,7 @@ permalink: /kidhub/
 - and more...
 
 ## Music
+- 2023.12.23: [光のオーケストラ 第二回演奏会](http://hikaoke.online/)参加
 - 2021.06.06: [Life of Norvrandt](https://htd-norvrandt.tumblr.com/) / FF14アレンジコンピ参加
 - 2019.10.27: [Life of Doma](https://htd-doma.tumblr.com/) / FF14アレンジコンピ参加
 - 2018.01.13: [光のオーケストラ](http://hikaoke.online/)参加
@@ -28,13 +29,12 @@ permalink: /kidhub/
 - 2015.04.26: [Life of Eorzea](https://www.zephyr-cradle.info/db/index.php?title=Life_of_Eorzea) / FF14アレンジコンピ参加
 
 DTM / Guitar / Vocal
-
-メインギター: GRETSCH Tennessean 1967
+GRETSCH Tennessean & Marshall Super Lead5 100W
 
 ## Photo
 - [flickr](https://www.flickr.com/photos/134331763@N08/)
 
-カメラ: SONY α7II & RICOH GRIII
+SONY α7II
 
 ## Development
 - [FF14 セリフジェネレータ](https://nanarya.github.io/ffxiv-speech-generator/)
