@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/srv/jekyll
     ports:
-      - 4000:4000
+      - 3000:4000
       - 35729:35729
     environment:
       - JEKYLL_ENV:development
