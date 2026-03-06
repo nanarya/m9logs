@@ -1,5 +1,5 @@
 services:
-  app:
+  web:
     image: jekyll/jekyll
     command: jekyll serve --force_polling --livereload --trace
     # command: jekyll build
