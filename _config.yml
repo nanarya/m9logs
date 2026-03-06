@@ -57,7 +57,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 source: .
-destination: ./docs
+destination: ./_site
 
 gems: ['jekyll-lunr-js-search']
 image: /assets/ogp.png
