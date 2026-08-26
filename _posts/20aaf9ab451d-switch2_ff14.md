@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Switch2でFF14始めてみた
+title: Switch2でFF14やってみた
 slug: switch2_ff14
 date: 2026-08-04 22:55:00 +0900
 author: キッド
