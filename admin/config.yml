@@ -31,4 +31,4 @@ collections:
         widget: select
         multiple: true
         options: [camp, game, diary, fishing, music, movie, photo, m9oftheyear, venezia, travel, mountain, anime, development, motor, book, astronomy, gadget, car, birdwatching, art, vtuber]
-      - { label: 本文, name: body, widget: markdown }
+      - { label: 本文, name: body, widget: markdown, modes: [raw, rich_text] }
