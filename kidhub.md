@@ -34,7 +34,7 @@ GRETSCH Tennessean & Marshall Super Lead5 100W
 ## Photo
 - [flickr](https://www.flickr.com/photos/134331763@N08/)
 
-SONY α7II
+SONY α7IV
 
 ## Development
 - [FF14 セリフジェネレータ](https://nanarya.github.io/ffxiv-speech-generator/)
