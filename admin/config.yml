@@ -14,13 +14,15 @@ collections:
     folder: _posts
     create: true
     # 既存の命名規則 YYYY-MM-DD-slug.md を自動生成
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    # 日付は投稿日(dateフィールド)、slugは手入力の英数字を使う
+    slug: "{{fields.date | date('YYYY-MM-DD')}}-{{fields.slug}}"
     # 画像を年/月に振り分け（要・動作確認）
     media_folder: '/assets/{{year}}/{{month}}'
     public_folder: '/assets/{{year}}/{{month}}'
     fields:
       - { label: レイアウト, name: layout, widget: hidden, default: post }
       - { label: タイトル, name: title, widget: string }
+      - { label: URLスラッグ（英数字）, name: slug, widget: string, hint: 'ファイル名とURLになる。英数字とハイフンで入力（例: bike-repair）' }
       - { label: 日付, name: date, widget: datetime, date_format: 'YYYY-MM-DD', time_format: 'HH:mm:ss', format: 'YYYY-MM-DD HH:mm:ss ZZ' }
       - { label: 著者, name: author, widget: hidden, default: キッド }
       - { label: コメント許可, name: comments, widget: hidden, default: true }
