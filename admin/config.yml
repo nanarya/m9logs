@@ -15,7 +15,7 @@ collections:
     create: true
     # 既存の命名規則 YYYY-MM-DD-slug.md を自動生成
     # 日付は投稿日(dateフィールド)、slugは手入力の英数字を使う
-    slug: "{{fields.date | date('YYYY-MM-DD')}}-{{fields.slug}}"
+    slug: "{{date | date('YYYY-MM-DD')}}-{{fields.slug}}"
     # 画像を年/月に振り分け（要・動作確認）
     media_folder: '/assets/{{year}}/{{month}}'
     public_folder: '/assets/{{year}}/{{month}}'
