@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: nanarya/m9logs
+  branch: master
+
+# 画像は既存慣習に合わせ 年/月 で保存（下記コレクション側で上書き）
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: posts
+    label: 記事
+    label_singular: 記事
+    folder: _posts
+    create: true
+    # 既存の命名規則 YYYY-MM-DD-slug.md を自動生成
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    # 画像を年/月に振り分け（要・動作確認）
+    media_folder: '/assets/{{year}}/{{month}}'
+    public_folder: '/assets/{{year}}/{{month}}'
+    fields:
+      - { label: レイアウト, name: layout, widget: hidden, default: post }
+      - { label: タイトル, name: title, widget: string }
+      - { label: 日付, name: date, widget: datetime, date_format: 'YYYY-MM-DD', time_format: 'HH:mm:ss', format: 'YYYY-MM-DD HH:mm:ss ZZ' }
+      - { label: 著者, name: author, widget: hidden, default: キッド }
+      - { label: コメント許可, name: comments, widget: hidden, default: true }
+      - label: カテゴリ
+        name: categories
+        widget: select
+        multiple: true
+        options: [camp, game, diary, fishing, music, movie, photo, m9oftheyear, venezia, travel, mountain, anime, development, motor, book, astronomy, gadget, car, birdwatching, art, vtuber]
+      - { label: 本文, name: body, widget: markdown }
