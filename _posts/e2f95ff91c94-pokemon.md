@@ -1,7 +1,7 @@
 ---
 layout: post
 title: めざせポケモンマスター
-slug: pokemon
+slug: pokemon_master
 date: 2026-08-26 23:25:00 +0900
 author: キッド
 comments: true
