@@ -56,6 +56,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - CLAUDE.md
+  - README.md
 source: .
 destination: ./_site
 
